@@ -14,12 +14,7 @@
       href="./assets/images/logo/favicon.ico"
       type="image/x-icon"
    >
-   <!-- 
-   
-   pendo functionality
-    
-   -->
-    <script type="text/javascript" src="./assets/js/pendo-functions.js"></script>
+  
     <!--
     - custom css link
   -->
@@ -35,50 +30,7 @@
       rel="stylesheet"
     />
 
-    <script>
-      (function (apiKey) {
-        (function (p, e, n, d, o) {
-          var v, w, x, y, z;
-          o = p[d] = p[d] || {};
-          o._q = o._q || [];
-          v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track'];
-          for (w = 0, x = v.length; w < x; ++w)
-            (function (m) {
-              o[m] =
-                o[m] ||
-                function () {
-                  o._q[m === v[0] ? 'unshift' : 'push'](
-                    [m].concat([].slice.call(arguments, 0))
-                  );
-                };
-            })(v[w]);
-          y = e.createElement(n);
-          y.async = !0;
-          y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
-          z = e.getElementsByTagName(n)[0];
-          z.parentNode.insertBefore(y, z);
-        })(window, document, 'script', 'pendo');
-
-        // This function creates visitors and accounts in Pendo
-        // You will need to replace <visitor-id-goes-here> and <account-id-goes-here> with values you use in your app
-        // Please use Strings, Numbers, or Bools for value types.
-        pendo.initialize({
-          visitor: {
-            id: 'visitorTest',
-
-            // email:        // Recommended if using Pendo Feedback, or NPS Email
-            // full_name:    // Recommended if using Pendo Feedback
-          },
-
-          account: {
-            id: 'accountTest',
-
-            // is_paying:    // Recommended if using Pendo Feedback
-            // monthly_value:// Recommended if using Pendo Feedback
-          },
-        });
-      })('e8b938d2-a39e-450f-789b-2f7fd8746586');
-    </script>
+  
   </head>
 
   <body>
@@ -201,16 +153,7 @@
               Purchase At Your Own Peril
             </p>
           </div>
-          <button class="banner-btn" onclick="changeVisitorId()">
-            Change Visitor Id
-          </button>
-          
-          <button class="banner-btn" onclick="changeAccountId()">
-            Change Account ID
-          </button>
-          <button class="banner-btn" onclick="updateVisitorMeta()">
-            Update Visitor Metadata
-          </button>
+      
 
           <div class="header-top-actions">
             <select name="currency">
